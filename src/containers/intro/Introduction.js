@@ -27,7 +27,7 @@ export default class Introduction extends Component {
                   <br /><br />
                   <span className='bold'>All these factors and more can offer you some much needed tax relief.</span>
                   <br /><br />
-                  Do not worry! We will not be making you fill out a full tax form, just follow the arrows, input your salary and let us do the magic.
+                  Do not worry, we will not be making you fill out a full tax form, just follow the arrows, input your salary and let us do the magic.
                </div>
             </div>
          </div>
