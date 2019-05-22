@@ -23,7 +23,15 @@ class App extends Component {
   }
 
   animateScrollArrow = event => {
-    console.log('animate')
+    const arrowEl = event.target.firstChild
+    arrowEl.classList.contains('rotate')
+      ? this.animationDirection(arrowEl, 'down')
+      : this.animationDirection(arrowEl, 'up');
+  }
+
+  animationDirection = (el, direction) => {
+    el.classList.add(direction);
+    setTimeout(() => el.classList.remove(direction), 500)
   }
 
   render() {

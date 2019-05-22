@@ -44,12 +44,20 @@
 #nav .icon {
   font-size: 30px;
   cursor: pointer;
-  border: solid 1px black;
 }
 
 #nav .icon i {
   margin: 20px;
-  transition: transform 2s;
+  transition: transform 2s ease 0s, top 2s;
+  position: relative;
+}
+
+#nav .icon i.down {
+  top: -10px;
+}
+
+#nav .icon i.up {
+  top: 10px;
 }
 
 .rotate {
