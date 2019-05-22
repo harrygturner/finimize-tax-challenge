@@ -12,6 +12,12 @@ div {
   z-index: 2;
 }
 
+#quote span {
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 700;
+}
+
 .section {
   height: 90vh;
 }
