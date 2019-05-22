@@ -2,3 +2,33 @@
   text-align: center;
 }
 
+div {
+  border: solid 1px black;
+}
+
+#quote {
+  position: absolute;
+  max-width: 200px;
+  z-index: 2;
+}
+
+.section {
+  height: 90vh;
+}
+
+#nav {
+  height: 10vh;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont {
+  height: 60vh;
+  width: 60vw;
+  margin: auto;
+  text-align: left;
+}
