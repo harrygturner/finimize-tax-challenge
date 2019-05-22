@@ -24,10 +24,6 @@
   height: 90vh;
 }
 
-#nav {
-  height: 10vh;
-}
-
 .center {
   display: flex;
   justify-content: center;
@@ -40,3 +36,31 @@
   margin: auto;
   text-align: left;
 }
+
+#nav {
+  height: 10vh;
+}
+
+#nav .icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#nav .icon i {
+  margin: 20px;
+  transition: transform 2s ease 0s, top 2s;
+  position: relative;
+}
+
+#nav .icon i.down {
+  top: -10px;
+}
+
+#nav .icon i.up {
+  top: 10px;
+}
+
+.rotate {
+  transform: rotate(180deg)
+}
+
