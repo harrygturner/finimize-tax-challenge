@@ -10,6 +10,12 @@ div {
   position: absolute;
   max-width: 200px;
   z-index: 2;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+#intro #quote.appear{
+  opacity: 1;
 }
 
 #quote span {
