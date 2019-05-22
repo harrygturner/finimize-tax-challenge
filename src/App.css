@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-div {
-  border: solid 1px black;
-}
-
 #quote {
   position: absolute;
   max-width: 200px;
