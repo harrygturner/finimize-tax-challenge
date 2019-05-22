@@ -2,3 +2,41 @@
   text-align: center;
 }
 
+#quote {
+  position: absolute;
+  max-width: 200px;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+#intro #quote.appear{
+  opacity: 1;
+}
+
+#quote span {
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.section {
+  height: 90vh;
+}
+
+#nav {
+  height: 10vh;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont {
+  height: 60vh;
+  width: 60vw;
+  margin: auto;
+  text-align: left;
+}

@@ -1,0 +1,23 @@
+#intro .header {
+   color: rgb(199, 111, 139);
+}
+
+#intro .header h3 {
+   letter-spacing: 1.5px;
+   margin-top: 4vh;
+}
+
+#intro .cont>div {
+   margin: 2%;
+}
+
+#intro .cont .content {
+   max-height: 39vh;
+   letter-spacing: 1px;
+   line-height: 25px;
+}
+
+.bold {
+   font-weight: bolder;
+   color: rgb(199, 111, 139);
+}
