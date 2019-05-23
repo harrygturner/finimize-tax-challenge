@@ -37,6 +37,11 @@
   text-align: left;
 }
 
+
+.cont>div {
+  margin: 2%;
+}
+
 #nav {
   height: 10vh;
 }

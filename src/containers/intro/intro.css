@@ -7,10 +7,6 @@
    margin-top: 4vh;
 }
 
-#intro .cont>div {
-   margin: 2%;
-}
-
 #intro .cont .content {
    max-height: 39vh;
    letter-spacing: 1px;

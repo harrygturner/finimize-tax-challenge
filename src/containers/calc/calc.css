@@ -1,0 +1,116 @@
+#calculator .cont {
+   text-align: center;
+   margin: auto;
+   display: grid;
+   grid-template-rows: 30% 10% 60%;
+}
+
+#calculator form div {
+   margin: 3% 0;
+   transition: opacity 1s;
+}
+
+#calculator span {
+   margin: 0 2%;
+}
+
+#calculator input[type=number] {
+   margin-left: 1%;
+   border: none;
+   border-bottom: solid 1px rgb(199, 111, 139);
+   font-size: 14px;
+   width: 80px;
+}
+
+#calculator input:focus {
+   outline: none;
+}
+
+#calculator select{
+   font-size: 14px;
+   font-family: 'Questrial'
+}
+
+#calculator select:focus{
+   outline: none;
+}
+
+.hidden {
+   opacity: 0;
+}
+
+#hours input {
+   width: 30px;
+}
+
+#calculator input[type=submit] {
+   background: white;
+   color: black;
+   padding: 10px 20px;
+   font-size: 14px;
+   font-weight: bold;
+   cursor: pointer;
+   border: solid 1px rgb(199, 111, 139);
+   transition: color 1s, background 1.5s;
+}
+
+#calculator input[type=submit]:hover {
+   background: rgb(199, 111, 139);
+   color: white;
+}
+
+#calculator .error {
+   color: red;
+   margin-top: 4%;
+   font-size: 14px;
+   font-weight: bold;
+   letter-spacing: 1px;
+}
+
+#result {
+   grid-row: 3/4;
+   display: grid;
+   grid-template-rows: 20% 60% 20%;
+   margin: 0;
+}
+
+#result table {
+   width: 100%;
+   margin: 2% 0; 
+   opacity: 0;
+   animation-delay: 0.5s;
+}
+
+#result td {
+   text-align: left;
+}
+
+.col1 {
+   letter-spacing: 1.2px;
+}
+
+@keyframes fade-in-right {
+   from {
+      opacity: 0;
+      transform: translateX(-200px);
+   }
+   to {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+
+.slide-right {
+   animation: fade-in-right ease 3s forwards;   
+}
+
+@keyframes fade-in-left {
+   from {
+      opacity: 0;
+      transform: translateX(55px);
+   }
+   to {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
