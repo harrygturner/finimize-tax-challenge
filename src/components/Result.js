@@ -3,6 +3,7 @@ import React from 'react';
 const Result = props => {
    const { taxedIncome, takeHomeIncome, hoursPerWeek } = props;
    const grossPay = taxedIncome + takeHomeIncome;
+
    return(
       <div id='result'>
          <div className='primary center'>
@@ -44,7 +45,7 @@ const Result = props => {
             Gross pay is your pay before tax, and Net pay is what actually makes it into your bank account after Income Tax.
          </div>
          <div className='btn' onClick={e => props.revealReliefInfo(e)}>
-            <button>PLEASE RELIEVE ME!</button>
+            <button>{ taxedIncome ? 'PLEASE RELIEVE ME!' : 'YOU HAVE NOTHING TO RELIEVE!' }</button>
          </div>
       </div>
    )

@@ -59,7 +59,7 @@ class App extends Component {
   
   calculateAmountAfterTax = (tax_rate, amount) => amount * (1-tax_rate);
 
-  // ------------------ animations -----------------------
+  // ------------------ animations ----------------------
   renderResults = () => {
     this.renderResultEl('.primary', 'slide-left')
     this.renderResultEl('.table', 'slide-right')
@@ -71,7 +71,7 @@ class App extends Component {
     const el = document.querySelector('#result ' + className);
     el.classList.add(animation);
   }
- 
+
   trackScrolling = () => {
     const introEl = document.querySelector('#intro');
     const navIcon = document.querySelector('#nav .icon i');
