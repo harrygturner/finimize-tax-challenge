@@ -1,3 +1,7 @@
+#calculator {
+   height: 100vh;
+}
+
 #calculator .cont {
    text-align: center;
    margin: auto;
@@ -74,11 +78,23 @@
    margin: 0;
 }
 
+#result .primary {
+   opacity: 0;
+   animation-delay: 0.5s;
+}
+
+#result span.bold {
+   margin: 6px;
+}
+
 #result table {
    width: 100%;
    margin: 2% 0; 
+}
+
+#result .table {
    opacity: 0;
-   animation-delay: 0.5s;
+   animation-delay: 2s;
 }
 
 #result td {
@@ -113,4 +129,29 @@
       opacity: 1;
       transform: translateX(0);
    }
+}
+
+.slide-left {
+   animation: fade-in-left ease 3s forwards; 
+}
+
+#result .btn {
+   opacity: 0;
+   animation-delay: 6s;
+}
+
+#result button {
+   background: white;
+   color: black;
+   padding: 10px 20px;
+   font-size: 14px;
+   font-weight: bold;
+   cursor: pointer;
+   border: solid 1px rgb(199, 111, 139);
+   transition: color 1s, background 1.5s;
+}
+
+#calculator button:hover {
+   background: rgb(199, 111, 139);
+   color: white;
 }
