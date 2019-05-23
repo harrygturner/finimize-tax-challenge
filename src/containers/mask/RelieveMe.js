@@ -10,7 +10,15 @@ export default class RelieveMe extends Component {
       if(grossPay <= 14900){
          return grossPay;
       } else {
-         return grossPay * (0.8);
+         const taxOption1 = grossPay * 0.2;
+         const taxOption2 = (grossPay - 14900) * 0.26;
+         return taxOption1 > taxOption2 ? grossPay - taxOption2 : grossPay - taxOption1;
+      }
+   }
+
+   calculateMarriageSaving = () => {
+      if (this.props.grossPay > 115000 && this.props.grossPay <= 45000){
+         return 250;
       }
    }
 
@@ -24,11 +32,12 @@ export default class RelieveMe extends Component {
                </div>
                < ReliefOption 
                   title='Get Married!'
-                  description='If the love of your life is not liable to income tax at a rate higher than the basic rate then they can transfer £1,250 of their personal allowance to their spouse or civil partner.'
+                  description='If one partner is earning below the basic rate (£11,500) and the other is paying the basic rate of income tax then they can transfer £1,250 of their personal allowance to their spouse or civil partner.'
+                  relief={this.calculateMarriageSaving()}
                />
                < ReliefOption 
                   title='Start adding to your pension'
-                  description='Tax relief is available on contributions up to 100% of your annual earnings, up until a maximum contribution of £40,000 (annual allowance).'
+                  description='Up until a maximum contribution of £40,000 (annual allowance), you will not need to pay any tax on the amount you contribute towards your pension each year.'
                />
                < ReliefOption 
                   title='Move to Jersey!'
