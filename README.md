@@ -17,18 +17,16 @@ Go to this repository and click on the 'Clone or download' green button. Then co
 
 Open up terminal and move yourself into a directory you wish this file to be located in and then issue the command below into the command line:
 
-git clone <URL you copied (git@github.com:harrygturner/finimize-tax-challenge.git)>
+`git clone <URL you copied (git@github.com:harrygturner/finimize-tax-challenge.git)>`
 
 Then using the command line (`cd`) enter the file you just created and ensure npm has been installed by entering:
 
-```
-npm -v
-```
+`npm -v`
 
 If you have npm alread installed on your computer then go ahead and install the dependecies with:
 
-```npm install```
+`npm install`
 
 Start the app with:
 
-```npm start```
+`npm start`
