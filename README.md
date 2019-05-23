@@ -21,12 +21,14 @@ git clone <URL you copied (git@github.com:harrygturner/finimize-tax-challenge.gi
 
 Then using the command line (`cd`) enter the file you just created and ensure npm has been installed by entering:
 
+```
 npm -v
+```
 
 If you have npm alread installed on your computer then go ahead and install the dependecies with:
 
-npm install
+```npm install```
 
 Start the app with:
 
-npm start
+```npm start```
