@@ -5,7 +5,8 @@ const Result = props => {
    const grossPay = taxedIncome + takeHomeIncome;
    return(
       <div id='result'>
-         <div className='primary'>
+         <div className='primary center'>
+            Your total income tax payable is <span className='bold'>£{taxedIncome.toFixed(2)}</span> for the financial year 2019/20.
          </div>
          <div className='table'>
             <table>
@@ -40,8 +41,10 @@ const Result = props => {
                   </tr>
                </tbody>
             </table>
+            Gross pay is your pay before tax, and Net pay is what actually makes it into your bank account after Income Tax.
          </div>
          <div className='btn'>
+            <button>PLEASE RELIEVE ME!</button>
          </div>
       </div>
    )

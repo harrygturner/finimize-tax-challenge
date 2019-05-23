@@ -7,10 +7,13 @@ import Navigation from './components/Navigation';
 
 class App extends Component {
 
-
   state = {
     takeHomeIncome: 0,
     taxedIncome: 0
+  }
+
+  componentDidMount() {
+    document.addEventListener('scroll', this.trackScrolling);
   }
 
   getSalaryPerAnnum = values => {
@@ -53,11 +56,15 @@ class App extends Component {
   calculateAmountAfterTax = (tax_rate, amount) => amount * (1-tax_rate);
 
   renderResults = () => {
-    const table = document.querySelector('#result table');
-    table.classList.add('slide-right');
+    this.renderResultEl('.primary', 'slide-left')
+    this.renderResultEl('.table', 'slide-right')
+    this.renderResultEl('.btn', 'slide-left')
 
-  componentDidMount() {
-    document.addEventListener('scroll', this.trackScrolling);
+  }
+
+  renderResultEl = (className, animation) => {
+    const el = document.querySelector('#result ' + className);
+    el.classList.add(animation);
   }
 
   trackScrolling = () => {
@@ -67,7 +74,6 @@ class App extends Component {
       navIcon.classList.add('rotate')
     } else {
       navIcon.classList.remove('rotate')
-
     }
   }
 

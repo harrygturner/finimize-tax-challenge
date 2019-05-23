@@ -53,7 +53,7 @@
 
 #nav .icon i {
   margin: 20px;
-  transition: transform 2s ease 0s, top 2s;
+  transition: transform 1s ease 0s, top 2s;
   position: relative;
 }
 
