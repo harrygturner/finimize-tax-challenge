@@ -7,6 +7,7 @@ import Navigation from './components/Navigation';
 
 class App extends Component {
 
+
   state = {
     takeHomeIncome: 0,
     taxedIncome: 0
@@ -54,13 +55,43 @@ class App extends Component {
   renderResults = () => {
     const table = document.querySelector('#result table');
     table.classList.add('slide-right');
+
+  componentDidMount() {
+    document.addEventListener('scroll', this.trackScrolling);
+  }
+
+  trackScrolling = () => {
+    const introEl = document.querySelector('#intro');
+    const navIcon = document.querySelector('#nav .icon i');
+    if(introEl.getBoundingClientRect().bottom < 100){
+      navIcon.classList.add('rotate')
+    } else {
+      navIcon.classList.remove('rotate')
+
+    }
+  }
+
+  animateScrollArrow = event => {
+    const arrowEl = event.target.firstChild
+    arrowEl.classList.contains('rotate')
+      ? this.animationDirection(arrowEl, 'down')
+      : this.animationDirection(arrowEl, 'up');
+  }
+
+  animationDirection = (el, direction) => {
+    el.classList.add(direction);
+    setTimeout(() => el.classList.remove(direction), 500)
   }
 
   render() {
     return (
       <div className="App">
-        < Introduction renderQuotes={this.quoteAnimation} />
-        < Navigation />
+        < Introduction 
+            renderQuotes={this.quoteAnimation} 
+        />
+        < Navigation 
+          animateScrollArrow={this.animateScrollArrow}
+        />
         < Calculator 
           getSalaryPerAnnum={this.getSalaryPerAnnum}
           takeHomeIncome={this.state.takeHomeIncome}
