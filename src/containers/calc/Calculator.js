@@ -14,9 +14,10 @@ export default class Calculator extends Component {
       errorMessage: ''
    }
 
-   handleInputChange = e => {
+   handleInputChange = event => {
+      const parameterValue = parseInt(event.target.value) ? parseInt(event.target.value) : event.target.value
       this.setState({
-         [e.target.name]: e.target.value,
+         [event.target.name]: parameterValue,
          errorMessage: ''
       })
    }
@@ -50,6 +51,7 @@ export default class Calculator extends Component {
                   takeHomeIncome={this.props.takeHomeIncome}
                   taxedIncome={this.props.taxedIncome}
                   hoursPerWeek={this.state.hoursPerWeek}
+                  revealReliefInfo={this.props.revealReliefInfo}
                />
             </div>
          </div>

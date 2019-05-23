@@ -4,10 +4,12 @@ import './App.css';
 import Introduction from './containers/intro/Introduction';
 import Calculator from './containers/calc/Calculator';
 import Navigation from './components/Navigation';
+import RelieveMe from './containers/mask/RelieveMe';
 
 class App extends Component {
 
   state = {
+    grossPay: 0,
     takeHomeIncome: 0,
     taxedIncome: 0
   }
@@ -47,6 +49,7 @@ class App extends Component {
     }
     const taxedIncome = salary - takeHomeIncome
     this.setState({ 
+      grossPay: salary,
       takeHomeIncome,
       taxedIncome 
     });
@@ -89,6 +92,33 @@ class App extends Component {
     setTimeout(() => el.classList.remove(direction), 500)
   }
 
+  hideReliefInfo = () => {
+    const el = document.querySelector('#relief');
+    el.classList.add('invisible');
+  }
+
+  revealReliefInfo = e => {
+    e.preventDefault();
+    document.querySelector('#relief').classList.remove('invisible');
+  }
+
+  handleHideReliefEl = e => {
+    if(e.target.className === 'mask'){
+      this.hideReliefInfo();
+    }
+  }
+
+  scrollToSection = () => {
+    const scrollIcon = document.querySelector('#nav i');
+    let section
+    if(scrollIcon.classList.contains('rotate')){
+      section = document.querySelector('#intro');
+    } else {
+      section = document.querySelector('#calculator')
+    }
+    window.scrollTo(0, section.offsetTop - 20);
+  }
+
   render() {
     return (
       <div className="App">
@@ -97,9 +127,18 @@ class App extends Component {
         />
         < Navigation 
           animateScrollArrow={this.animateScrollArrow}
+          scrollToSection={this.scrollToSection}
         />
         < Calculator 
           getSalaryPerAnnum={this.getSalaryPerAnnum}
+          takeHomeIncome={this.state.takeHomeIncome}
+          taxedIncome={this.state.taxedIncome}
+          revealReliefInfo={this.revealReliefInfo}
+        />
+        < RelieveMe 
+          hideReliefInfo={this.hideReliefInfo}
+          handleExitClick={this.handleHideReliefEl}
+          grossPay={this.state.grossPay}
           takeHomeIncome={this.state.takeHomeIncome}
           taxedIncome={this.state.taxedIncome}
         />

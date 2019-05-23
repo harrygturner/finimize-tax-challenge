@@ -43,7 +43,7 @@ const Result = props => {
             </table>
             Gross pay is your pay before tax, and Net pay is what actually makes it into your bank account after Income Tax.
          </div>
-         <div className='btn'>
+         <div className='btn' onClick={e => props.revealReliefInfo(e)}>
             <button>PLEASE RELIEVE ME!</button>
          </div>
       </div>

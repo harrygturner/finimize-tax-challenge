@@ -1,3 +1,7 @@
+#calculator {
+   height: 100vh;
+}
+
 #calculator .cont {
    text-align: center;
    margin: auto;
