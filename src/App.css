@@ -40,3 +40,7 @@
   margin: auto;
   text-align: left;
 }
+
+.cont>div {
+  margin: 2%;
+}

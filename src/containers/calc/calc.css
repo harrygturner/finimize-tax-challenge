@@ -1,0 +1,70 @@
+#calculator .cont {
+   text-align: center;
+   margin: auto;
+}
+/* 
+#calculator div {
+   border: solid 1px black;
+} */
+
+#calculator form div {
+   margin: 3% 0;
+   transition: opacity 1s;
+}
+
+#calculator span {
+   margin: 0 2%;
+}
+
+#calculator input[type=number] {
+   margin-left: 1%;
+   border: none;
+   border-bottom: solid 1px rgb(199, 111, 139);
+   font-size: 14px;
+   width: 80px;
+}
+
+#calculator input:focus {
+   outline: none;
+}
+
+#calculator select{
+   font-size: 14px;
+   font-family: 'Questrial'
+}
+
+#calculator select:focus{
+   outline: none;
+}
+
+.hidden {
+   opacity: 0;
+}
+
+#hours input {
+   width: 30px;
+}
+
+#calculator input[type=submit] {
+   background: white;
+   color: black;
+   padding: 10px 20px;
+   font-size: 14px;
+   font-weight: bold;
+   cursor: pointer;
+   border: solid 1px rgb(199, 111, 139);
+   transition: color 1s, background 1.5s;
+}
+
+#calculator input[type=submit]:hover {
+   background: rgb(199, 111, 139);
+   color: white;
+}
+
+#calculator .error {
+   color: red;
+   margin-top: 4%;
+   font-size: 14px;
+   font-weight: bold;
+   letter-spacing: 1px;
+}
