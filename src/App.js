@@ -58,6 +58,8 @@ class App extends Component {
         < Navigation />
         < Calculator 
           getSalaryPerAnnum={this.getSalaryPerAnnum}
+          takeHomeIncome={this.state.takeHomeIncome}
+          taxedIncome={this.state.taxedIncome}
         />
       </div>
     )

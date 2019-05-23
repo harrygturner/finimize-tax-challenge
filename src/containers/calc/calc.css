@@ -1,11 +1,9 @@
 #calculator .cont {
    text-align: center;
    margin: auto;
+   display: grid;
+   grid-template-rows: 30% 10% 60%;
 }
-/* 
-#calculator div {
-   border: solid 1px black;
-} */
 
 #calculator form div {
    margin: 3% 0;
@@ -67,4 +65,46 @@
    font-size: 14px;
    font-weight: bold;
    letter-spacing: 1px;
+}
+
+#result {
+   grid-row: 3/4;
+   display: grid;
+   grid-template-rows: 20% 60% 20%;
+   margin: 0;
+}
+
+#result table {
+   width: 100%;
+   margin: 2% 0; 
+}
+
+#result td {
+   text-align: left;
+}
+
+.col1 {
+   letter-spacing: 1.2px;
+}
+
+@keyframes fade-in-right {
+   from {
+      opacity: 0;
+      transform: translateX(-55px);
+   }
+   to {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+
+@keyframes fade-in-left {
+   from {
+      opacity: 0;
+      transform: translateX(55px);
+   }
+   to {
+      opacity: 1;
+      transform: translateX(0);
+   }
 }
