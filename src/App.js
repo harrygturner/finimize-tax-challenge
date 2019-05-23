@@ -46,10 +46,15 @@ class App extends Component {
       takeHomeIncome,
       taxedIncome 
     });
-    console.log(takeHomeIncome, taxedIncome);
+    this.renderResults()
   }
   
   calculateAmountAfterTax = (tax_rate, amount) => amount * (1-tax_rate);
+
+  renderResults = () => {
+    const table = document.querySelector('#result table');
+    table.classList.add('slide-right');
+  }
 
   render() {
     return (

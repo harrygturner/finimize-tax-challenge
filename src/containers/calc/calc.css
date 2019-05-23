@@ -77,6 +77,8 @@
 #result table {
    width: 100%;
    margin: 2% 0; 
+   opacity: 0;
+   animation-delay: 0.5s;
 }
 
 #result td {
@@ -90,12 +92,16 @@
 @keyframes fade-in-right {
    from {
       opacity: 0;
-      transform: translateX(-55px);
+      transform: translateX(-200px);
    }
    to {
       opacity: 1;
       transform: translateX(0);
    }
+}
+
+.slide-right {
+   animation: fade-in-right ease 3s forwards;   
 }
 
 @keyframes fade-in-left {
