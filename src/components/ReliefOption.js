@@ -5,7 +5,7 @@ const ReliefOption = props => (
       <h3>{props.title}</h3>
       <p>{props.description}</p>
       { props.relief && props.relief > 0 
-         ? <p>Amount your income will be relieved is <span className='bold'>£{props.relief}</span></p>
+         ? <p>Amount your income will be relieved is <span className='bold'>£{props.relief}</span>.</p>
          : null
       }
    </div>

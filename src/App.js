@@ -18,6 +18,7 @@ class App extends Component {
     document.addEventListener('scroll', this.trackScrolling);
   }
 
+  // ----------------- income calculations --------------------
   getSalaryPerAnnum = values => {
     const { salary, rate, hoursPerWeek } = values;
     const weeksInYear = 52;
@@ -58,6 +59,7 @@ class App extends Component {
   
   calculateAmountAfterTax = (tax_rate, amount) => amount * (1-tax_rate);
 
+  // ------------------ animations -----------------------
   renderResults = () => {
     this.renderResultEl('.primary', 'slide-left')
     this.renderResultEl('.table', 'slide-right')
@@ -69,7 +71,7 @@ class App extends Component {
     const el = document.querySelector('#result ' + className);
     el.classList.add(animation);
   }
-
+ 
   trackScrolling = () => {
     const introEl = document.querySelector('#intro');
     const navIcon = document.querySelector('#nav .icon i');
@@ -92,6 +94,18 @@ class App extends Component {
     setTimeout(() => el.classList.remove(direction), 500)
   }
 
+  scrollToSection = () => {
+    const scrollIcon = document.querySelector('#nav i');
+    let section
+    if(scrollIcon.classList.contains('rotate')){
+      section = document.querySelector('#intro');
+    } else {
+      section = document.querySelector('#calculator')
+    }
+    window.scrollTo(0, section.offsetTop - 20);
+  }
+
+  // ------------------- relief section --------------------
   hideReliefInfo = () => {
     const el = document.querySelector('#relief');
     el.classList.add('invisible');
@@ -106,17 +120,6 @@ class App extends Component {
     if(e.target.className === 'mask'){
       this.hideReliefInfo();
     }
-  }
-
-  scrollToSection = () => {
-    const scrollIcon = document.querySelector('#nav i');
-    let section
-    if(scrollIcon.classList.contains('rotate')){
-      section = document.querySelector('#intro');
-    } else {
-      section = document.querySelector('#calculator')
-    }
-    window.scrollTo(0, section.offsetTop - 20);
   }
 
   render() {
@@ -140,7 +143,6 @@ class App extends Component {
           handleExitClick={this.handleHideReliefEl}
           grossPay={this.state.grossPay}
           takeHomeIncome={this.state.takeHomeIncome}
-          taxedIncome={this.state.taxedIncome}
         />
       </div>
     )
